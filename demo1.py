@@ -31,10 +31,6 @@ class SunSwap:
         self.tron = Tron(provider)
         self.private_key = PrivateKey(bytes.fromhex(private_key))
 
-    def get_contract(self, contract: Contract):
-        abi_contract = self.fetch_abi(contract.address)
-        return self.client.eth.contract(address=contract.address, abi=abi_contract)
-
     # get ERC20 token balance of the account
     def erc20_balance(self, erc20: Contract) -> Decimal:
         contract = self.tron.get_contract(erc20.address)

@@ -5,7 +5,7 @@ some examples of interact with sunswap using python
 
 check the USDT balance on the account
 
-monitor the price of SUN, if the price of cake is lower than 0.0054 USDT/SUN, buy 1 USDT of SUN.
+monitor the price of SUN, if the price of SUN is lower than 0.0054 USDT/SUN, buy 1 USDT of SUN.
 
 ### References
 

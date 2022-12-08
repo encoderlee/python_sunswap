@@ -43,7 +43,7 @@ class SunSwap:
         balance = Decimal(balance) / (10 ** decimals)
         return balance
 
-    # approve the pancakeswap contract to use erc20 tokens
+    # approve the sunswap contract to use erc20 tokens
     def approve_erc20_to_sunswap(self, erc20: Contract):
         contract = self.tron.get_contract(erc20.address)
         approve_amount = 2 ** 256 - 1
@@ -76,7 +76,7 @@ class SunSwap:
 
     # swap token
     def swap_token(self, amount_in: Decimal, token_path: List[Contract]):
-        # approve token to pancakeswap if not
+        # approve token to sunswap if not
         self.approve_erc20_to_sunswap(token_path[0])
 
         contract = self.tron.get_contract(Known.sunswap.address)
